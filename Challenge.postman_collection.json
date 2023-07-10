@@ -1,0 +1,95 @@
+{
+	"info": {
+		"_postman_id": "544bdd0f-e3c9-43bf-bdd4-f611d3ecace8",
+		"name": "Challenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22879015"
+	},
+	"item": [
+		{
+			"name": "Get employee list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/employee/list?page=1&limit=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"employee",
+						"list"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Test\",\n    \"email\": \"test@test.com\",\n    \"dateOfBirth\": \"2000-01-01\",\n    \"profilePicture\": \"https://pixlok.com/wp-content/uploads/2021/02/profile-Icon-SVG-300x300.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/employee/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"fullName\": \"Test1\",\n    \"email\": \"test@test.com\",\n    \"dateOfBirth\": \"2000-01-02\",\n    \"profilePicture\": \"https://pixlok.com/wp-content/uploads/2021/02/profile-Icon-SVG-300x300.jpg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/employee/update"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:3000/api/employee/delete"
+			},
+			"response": []
+		}
+	]
+}
